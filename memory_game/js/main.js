@@ -23,10 +23,20 @@ const cards = [
 
 const cardsInPlay = [];
 
-flipCard(0);
-flipCard(2);
+function createBoard(){
+	for(let i = 0; i < cards.length; i++)
+	{
+		const cardElement = document.createElement('img');
+		cardElement.setAttribute('src', 'images/back.png');
+		cardElement.setAttribute('data-id', i);
+		cardElement.addEventListener('click', flipCard);
+		document.getElementById('game-board').appendChild(cardElement);
+	}
+}
 
-function flipCard(cardId){
+function flipCard(){
+	let cardId = this.getAttribute('data-id');
+	this.setAttribute('src', cards[cardId].cardImage);
 
 	cardsInPlay.push(cards[cardId].rank);
 
@@ -47,3 +57,5 @@ function checkForMatch(){
 	else
 		alert("Sorry try again!");
 }
+
+createBoard();
