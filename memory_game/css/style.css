@@ -41,8 +41,6 @@ a{
 	font-size: 18px;
 	margin: 0px 20px;
 	border-bottom: 2px solid transparent;
-
-
 }
 
 a:hover{
@@ -64,13 +62,31 @@ p{
 }
 
 footer{
-	text-decoration: uppercase;
+	text-transform: uppercase;
 	padding: 0 20px;
 	background-color: #0D2C40;
 	color: white;
 	font-size: 14px;
 	letter-spacing: .08em;
 	font-weight: 500;
+}
+
+button{
+	background-color: #0D2C40;
+	color: white;
+	text-transform: uppercase;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	letter-spacing: .1em;
+}
+
+label{
+	color: red;
+}
+
+.score{
+	font-weight: 800;
+	margin-bottom: 0;
 }
 
 .copyright{
